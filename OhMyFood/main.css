@@ -1,0 +1,935 @@
+@charset "UTF-8";
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.lds-dual-ring {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  margin: auto;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  border-color: #9356DC transparent #9356DC transparent;
+  -webkit-animation: lds-dual-ring 3s linear 1;
+  animation: lds-dual-ring 3s linear 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 10rem;
+  opacity: 0;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.page {
+  position: absolute;
+}
+
+html {
+  width: 100%;
+}
+
+.ohmyfood {
+  background-color: white;
+  border-bottom: 5px #d3d3d3;
+  text-align: center;
+}
+
+body {
+  -webkit-animation: fadeInAnimation ease 3s;
+          animation: fadeInAnimation ease 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin: 0px;
+  width: 100%;
+}
+
+.logo {
+  height: 2%;
+  width: 40%;
+  border-radius: 0px;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+header {
+  background: rgb(241, 241, 241);
+  padding: 0px 0px 1px 0px;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  header {
+    height: 28rem;
+  }
+}
+@media all and (min-width: 800px) {
+  header {
+    height: 42rem;
+  }
+}
+
+.barre_de_recherche {
+  border-top: 3px solid rgba(202, 202, 202, 0.53);
+  background-color: rgb(222, 222, 222);
+  margin: 0px 0px 30px 0px;
+  flex-direction: column;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 4rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .barre_de_recherche {
+    margin: 0px 0px 3rem 0px;
+    height: 4rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .barre_de_recherche {
+    margin: 0px 0px 6rem 0px;
+    height: 6rem;
+  }
+}
+
+#image_recherche {
+  font-size: 1rem;
+  color: #000000;
+  left: 2.5rem;
+  position: relative;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #image_recherche {
+    font-size: 1.5rem;
+    left: 4rem;
+    position: relative;
+  }
+}
+@media all and (min-width: 800px) {
+  #image_recherche {
+    font-size: 2.5vw;
+  }
+}
+
+#destination {
+  border: "none";
+  justify-content: center;
+  background-color: rgb(222, 222, 222);
+  font-size: 1rem;
+  border-style: none;
+  border: none;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #destination {
+    font-size: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  #destination {
+    font-size: 2rem;
+  }
+}
+
+.texte {
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5rem;
+  text-align: initial;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .texte {
+    bottom: -2rem;
+  }
+}
+
+.texte_recherche1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Shrikhand";
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.texte_recherche2 {
+  margin: 30px 0px 0px 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .texte_recherche2 {
+    margin: 1rem 0px 2rem 0px;
+  }
+}
+@media all and (min-width: 800px) {
+  .texte_recherche2 {
+    margin: 1rem 0px 2rem 0px;
+  }
+}
+
+h2 {
+  margin: 0px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Arial";
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.bouton_recherche {
+  background: linear-gradient(to bottom, rgb(240, 182, 191), #9356DC);
+  text-align: center;
+  box-shadow: 1px 5px 11px 1px #767676;
+  border-radius: 45px 45px 45px 45px;
+  margin: 30px 19% 70px 19%;
+  padding: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .bouton_recherche {
+    width: 17rem;
+    margin: auto;
+  }
+}
+@media all and (min-width: 800px) {
+  .bouton_recherche {
+    width: 23rem;
+    margin: auto;
+  }
+}
+
+.bouton_recherche:hover {
+  filter: brightness(1.1);
+  box-shadow: 2px 5px 5px black;
+}
+
+h3 {
+  text-transform: none;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: "Arial";
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/*block fonctionnement*/
+.fonctionnement {
+  margin: 30px 1rem 3rem 2rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .fonctionnement {
+    margin: 5rem 4rem 3rem 4rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .fonctionnement {
+    margin: 5rem 6rem 3rem 6rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  right: 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h4 {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h4 {
+    font-size: 3rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h5 {
+    font-size: 2.5rem;
+  }
+}
+
+.image_menu {
+  overflow: hidden;
+  height: 70%;
+  position: relative;
+}
+@media all and (max-width: 500px) {
+  .image_menu {
+    height: 80%;
+  }
+}
+@media all and (min-width: 800px) {
+  .image_menu {
+    height: 75%;
+  }
+}
+
+#La_palette_du_goût,
+#La_note_enchantée,
+#À_la_française,
+#Le_délice_des_sens {
+  text-decoration: none;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.partie1_fonctionnement,
+.partie2_fonctionnement,
+.partie3_fonctionnement {
+  height: 5rem;
+  margin: 0px 0px 2rem 0px;
+  font-size: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 45px 45px 45px 45px;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .partie1_fonctionnement,
+.partie2_fonctionnement,
+.partie3_fonctionnement {
+    height: 8rem;
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .partie1_fonctionnement,
+.partie2_fonctionnement,
+.partie3_fonctionnement {
+    height: 11rem;
+    font-size: 2rem;
+  }
+}
+
+.partie1_fonctionnement:hover,
+.partie2_fonctionnement:hover,
+.partie3_fonctionnement:hover {
+  filter: brightness(1.03);
+  box-shadow: 2px 5px 5px black;
+}
+.partie1_fonctionnement:hover:hover #image_phone, .partie1_fonctionnement:hover:hover #image_liste, .partie1_fonctionnement:hover:hover #image_restaurant,
+.partie2_fonctionnement:hover:hover #image_phone,
+.partie2_fonctionnement:hover:hover #image_liste,
+.partie2_fonctionnement:hover:hover #image_restaurant,
+.partie3_fonctionnement:hover:hover #image_phone,
+.partie3_fonctionnement:hover:hover #image_liste,
+.partie3_fonctionnement:hover:hover #image_restaurant {
+  color: #9356DC;
+}
+
+.chiffre {
+  background-color: #9356DC;
+  border-radius: 45px 45px 45px 45px;
+  position: relative;
+  padding: 8px 12px 23px 12px;
+  margin: 25px 0px 25px 0px;
+  color: #ffffff;
+  right: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .chiffre {
+    padding: 0.8rem 1.5rem 2rem 1.5rem;
+    margin: 2rem 0rem 2rem 1.5rem;
+    right: 3rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .chiffre {
+    padding: 1rem 2rem 0rem 2rem;
+    margin: 3rem 0rem 3rem 0rem;
+    color: #ffffff;
+    right: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+#image_phone,
+#image_liste,
+#image_restaurant {
+  font-size: 1rem;
+  color: gray;
+  margin: 0px 10% 0px 5%;
+  align-items: center;
+  display: flex;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #image_phone,
+#image_liste,
+#image_restaurant {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  #image_phone,
+#image_liste,
+#image_restaurant {
+    font-size: 3rem;
+  }
+}
+
+/*restaurants*/
+.restaurants {
+  background-color: rgb(241, 241, 241);
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .restaurants {
+    padding: 3rem 2rem 1rem 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .restaurants {
+    background-color: rgb(241, 241, 241);
+    -moz-column-count: 2;
+         column-count: 2;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0rem 7rem 0rem 7rem;
+  }
+}
+
+h6 {
+  font-size: 1.5rem;
+  margin: 0px;
+  background-color: #f1f1f1;
+  padding: 3rem 0rem 0rem 7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  h6 {
+    font-size: 2rem;
+    padding: 6rem 0rem 0rem 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  h6 {
+    font-size: 3rem;
+  }
+}
+
+.fa-regular {
+  content: "\f004";
+  top: 0rem;
+  right: 1rem;
+  font-weight: bold;
+  transition: color 1s ease-out;
+  position: relative;
+  text-shadow: 0 0 3px #000;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .fa-regular {
+    font-size: 3rem;
+    right: 3rem;
+    top: 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .fa-regular {
+    font-size: 2.5rem;
+    right: 3rem;
+  }
+}
+.fa-regular:hover {
+  color: #9356DC;
+}
+
+.partie1_restaurants {
+  position: relative;
+  top: 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .partie1_restaurants {
+    top: 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .partie1_restaurants {
+    top: -2.3rem;
+  }
+}
+
+.partie2_restaurants {
+  position: relative;
+  top: -1rem;
+}
+@media all and (max-width: 500px) {
+  .partie2_restaurants {
+    top: 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .partie2_restaurants {
+    top: -10rem;
+  }
+}
+
+.partie3_restaurants {
+  position: relative;
+  top: 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .partie3_restaurants {
+    top: 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .partie3_restaurants {
+    top: 6rem;
+  }
+}
+
+.partie4_restaurants {
+  position: relative;
+  top: -1rem;
+}
+@media all and (max-width: 500px) {
+  .partie4_restaurants {
+    top: 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .partie4_restaurants {
+    top: 7rem;
+  }
+}
+
+.nouveau1 > p {
+  left: 1rem;
+  bottom: 0rem;
+  position: relative;
+  margin: 0rem 0rem -1.5rem 0rem;
+  font-weight: bold;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .nouveau1 > p {
+    left: 2rem;
+    margin: 1rem 0rem -1.5rem 0rem;
+  }
+}
+
+.nouveau2 > p {
+  left: 1rem;
+  bottom: 0rem;
+  position: relative;
+  margin: 0rem 0rem -1.5rem 0rem;
+  font-weight: bold;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .nouveau2 > p {
+    left: 2rem;
+    margin: 1rem 0rem -1.5rem 0rem;
+  }
+}
+
+.nouveau1 {
+  font-size: 30px;
+  background-color: #7FFFD4;
+  position: absolute;
+  color: #006300;
+  margin: 1rem 0rem 5rem 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 6rem;
+  float: right;
+  height: 1.5rem;
+  right: 3rem;
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem 0rem 0rem 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .nouveau1 {
+    width: 10rem;
+    right: 4rem;
+    font-size: 2rem;
+    background-color: #7FFFD4;
+    position: absolute;
+    color: #006300;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    height: 4rem;
+    top: 81rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .nouveau1 {
+    top: 6.5rem;
+    width: 8rem;
+    right: 1rem;
+    font-size: 30px;
+    background-color: #7FFFD4;
+    position: relative;
+    color: #006300;
+    margin: 1rem 0rem 5rem 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    height: 2rem;
+  }
+}
+
+.nouveau2 {
+  font-size: 30px;
+  background-color: #7FFFD4;
+  position: relative;
+  color: #006300;
+  margin: 1rem 0rem 5rem 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 6rem;
+  float: right;
+  height: 1.5rem;
+  right: 3rem;
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem 0rem 0rem 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .nouveau2 {
+    width: 10rem;
+    right: 4rem;
+    font-size: 30px;
+    background-color: #7FFFD4;
+    position: absolute;
+    color: #006300;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    height: 4rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .nouveau2 {
+    width: 8rem;
+    right: 1rem;
+    font-size: 30px;
+    background-color: #7FFFD4;
+    position: relative;
+    color: #006300;
+    margin: 1rem 0rem 5rem 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    height: 2rem;
+    bottom: 1.5rem;
+  }
+}
+
+p {
+  position: relative;
+  left: 2rem;
+  text-align: initial;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0rem 0rem 0rem 0rem;
+  font-size: 1rem;
+  position: relative;
+  bottom: 1rem;
+  width: 70%;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  p {
+    font-size: 1.5rem;
+    margin: 1rem 0rem 0rem 0rem;
+  }
+}
+@media all and (min-width: 800px) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  position: relative;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.description {
+  width: 100%;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.41);
+  margin: 0px 0px 45px 0px;
+  border-radius: 25px 25px 25px 25px;
+  background-color: white;
+  text-align: end;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+.description:hover {
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.71);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(54, 54, 54);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 15rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  footer {
+    height: 25rem;
+  }
+}
+@media all and (min-width: 800px) {
+  footer {
+    height: 36rem;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0rem;
+  }
+}
+
+i {
+  color: #ffffff;
+}
+
+.titre_footer img {
+  height: 25px;
+  width: 28%;
+  filter: invert(1);
+  margin: 0rem;
+  border-radius: 0px;
+  padding: 2rem 0rem 0rem 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .titre_footer img {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 1.5rem;
+    filter: invert(1);
+    height: 2rem;
+    margin: 1rem 0rem 2rem 0rem;
+    border: 0px;
+    padding: 0rem 0rem 0rem 2rem;
+    width: 22%;
+  }
+}
+@media all and (min-width: 800px) {
+  .titre_footer img {
+    height: 3rem;
+    width: 20%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0rem;
+  }
+}
+
+.titre_footer {
+  position: relative;
+  top: 0rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  .titre_footer {
+    position: relative;
+    top: 1.5rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .titre_footer {
+    position: relative;
+    top: 4rem;
+    padding: 0rem 0rem 0rem 2rem;
+  }
+}
+
+ul {
+  display: grid;
+  justify-content: space-between;
+  height: 7rem;
+  list-style-type: none;
+  top: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 8rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  ul {
+    position: relative;
+    top: 2rem;
+    height: 13rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media all and (min-width: 800px) {
+  ul {
+    height: 15rem;
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+  li a {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  li a {
+    font-size: 2rem;
+  }
+}
+
+form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #fourchette_couteau {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  #fourchette_couteau {
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 800px) {
+  #icone_hande {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  #icone_hande {
+    font-size: 2rem;
+  }
+}
+
+.a {
+  text-decoration: none;
+  color: black;
+}
+
+#partie1, #partie2, #partie3, #partie4 {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

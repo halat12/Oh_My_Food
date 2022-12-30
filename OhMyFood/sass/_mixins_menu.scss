@@ -1,0 +1,716 @@
+@mixin mobile-only {
+    @media all and (max-width: 500px) {
+        @content
+    }
+} 
+
+@mixin tablette-only {
+    @media all and (min-width: 500px) and (max-width: 800px) {
+        @content
+    }
+}
+
+@mixin ordinateur-only {
+    @media all and (min-width: 800px) {
+        @content
+    }
+}
+
+@mixin page_menu {
+    font-size: map-get($taille, page);
+}
+
+@mixin fa_solid_menu {
+    color: $gris;
+    margin: map-get($margeexterne, fa-solid);
+}
+
+@mixin arow_left {
+    margin: map-get($margeexterne, fa_arow_mobile);
+    position: relative;
+    font-size: 1rem;
+    color: black;
+    @include tablette-only {
+        margin: map-get($margeexterne, fa_arow_tablette);
+        font-size: 2rem;
+    }
+
+    @include ordinateur-only {
+        margin: map-get($margeexterne, fa_arow_ordi);
+        font-size:3rem;
+    }
+}
+
+@mixin body {
+    margin: map-get($margeexterne, body);
+    width: map-get($largeur,body);
+}
+
+@mixin haut_page {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin: map-get($margeexterne, haut_page_mobile);
+
+    @include tablette-only {
+        margin: map-get($margeexterne, haut_page_tablette);
+    }
+
+    @include ordinateur-only {
+        margin: map-get($margeexterne, haut_page_ordi);
+    }
+}
+
+@mixin logo_menu {
+    height: map-get($hauteur, logo_menu);
+    width: map-get($largeur, logo_menu);
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include ordinateur-only {
+        height: map-get($hauteur, logo_menu_ordi);
+    }
+}
+
+@mixin restaurant_image_menu {
+    bottom: map-get($bottom, restaurant_image);
+    width: map-get($largeur, restaurant_image);
+    position: relative;
+}
+@mixin restaurants{
+    padding: map-get($margeinterne,restaurants);
+}
+@mixin element_menu {
+    background-color: $blanc-sombre;
+    border-radius: map-get($anglebord, element);
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom: map-get($bottom, element);
+
+    @include ordinateur-only {
+        padding: map-get($margeinterne, element_ordi);
+    }}
+
+    @mixin titres_parties {
+        padding: map-get($margeinterne, titres_parties);
+        border-bottom: map-get($bordure_bas, titres_parties);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @mixin h1_menu {
+        margin: map-get($margeexterne, h1_menu_mobile);
+        font-size: map-get($taille, h1_menu);
+        height: map-get($hauteur, h1);
+        padding: map-get($margeinterne, h1);
+        font-weight: bold;
+        font-family: Cursive, Comic Sans;
+        font-weight: bold;
+        @include tablette-only{
+
+        margin: map-get($margeexterne, h1_menu_tablette);
+        }
+        @include ordinateur-only {
+            font-size: map-get($taille, h1_menu_ordi);
+        }
+    }
+
+    @mixin h2_menu {
+        padding: map-get($margeinterne, titres_parties);
+        font-size: map-get($taille, h2_menu_mobile);
+
+        @include tablette-only {
+            padding: map-get($margeinterne, titres_parties);
+            font-size: map-get($taille, h2_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            padding: map-get($margeinterne, titres_parties);
+            font-size: map-get($taille, h2_menu_ordi);
+        }
+    }
+
+    @mixin button {
+        background-color: $blanc-sombre;
+        border: none;
+        border-radius: map-get($anglebord, button);
+        padding: map-get($margeinterne, button);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @mixin fa_heart {
+        color: gray;
+        padding: map-get($margeinterne, fa_heart);
+        font-size: map-get($taille, fa_heart);
+
+        @include tablette-only {
+            padding: map-get($margeinterne, fa_heart_tablette);
+            font-size: map-get($taille, fa_heart_tablette);
+        }
+
+        @include ordinateur-only {
+            padding: map-get($margeinterne, ordinateur_only_ordi);
+            font-size: map-get($taille, ordinateur_only_ordi);
+        }
+
+        &:hover {
+            color: $purpel;
+        }
+    }
+
+    @mixin titres {
+        border-bottom: 5px solid $vert;
+        width: map-get($largeur, titres);
+        left: map-get($left, titres);
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @mixin description_menu {
+        display: grid;
+        justify-content: space-between;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 55%;
+        @include tablette-only{
+            width: 70%;
+        }
+        @include ordinateur-only{
+            width: 19%;
+        }
+}
+    
+
+    @mixin h3_menu {
+        font-size: map-get($taille, h3_menu_mobile);
+        margin: map-get($margeexterne, h3_menu_mobile);
+        /*troix points*/
+        white-space: break-spaces;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+
+        @include tablette-only {
+            margin: map-get($margeexterne, h3_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            top: map-get($top, h3_menu);
+            position: relative;
+            font-size: map-get($taille, h3_menu_ordi);
+            margin: map-get($margeexterne, h3_menu_ordi);
+        }
+}
+
+    @mixin h4_menu {
+        font-size: map-get($taille, h4_menu_mobile);
+        margin: map-get($margeexterne, h4_menu_mobile);
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        /*troix points*/
+            white-space: break-spaces;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        @include ordinateur-only {
+            font-size: map-get($taille, h4_menu_ordi);
+            top: map-get($top, h4_menu);
+            position: relative;
+        }
+    }
+
+
+    @mixin h5_menu {
+        font-size: map-get($taille, h5);
+        margin: map-get($margeexterne, h5);
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+
+        align-items: center;
+        display: flex;
+
+        @include ordinateur-only {
+            font-size: map-get($taille, h5_hover);
+        }
+    }
+
+    @mixin p_menu {
+        border-radius: map-get($anglebord, p_menu_mobile);
+        font-size: map-get($taille, p_menu_mobile);
+        padding: map-get($margeinterne, p_menu_mobile);
+        width: map-get($largeur, p_menu_mobile);
+        font-weight: bold;
+        background: linear-gradient(to bottom, rgb(240, 182, 191), rgb(153, 70, 190));
+        justify-content: center;
+        text-align: center;
+        color: #FFFFFF;
+        box-shadow: 0px 0px 7px 1px $gris;
+        font-family: Arial, Helvetica, sans-serif;
+        @include tablette-only {
+            margin: map-get($margeinterne, p_menu_tablette);
+            padding: map-get($margeinterne, p_menu_tablette);
+            width: map-get($largeur, p_menu_tablette);
+        }
+        @include ordinateur-only {
+            margin: map-get($margeexterne, p_ordi);
+            font-size: map-get($taille, p_menu_ordi);
+            padding: map-get($margeinterne, p_menu_ordi);
+            width: map-get($largeur, p_menu_ordi);
+        }
+        &:hover {
+            box-shadow: map-get($ombre, box-shadow-hover) $gris;
+            background: linear-gradient(to bottom, $whitepink, $whitepurpel);
+        }
+
+    }
+
+    @mixin commander_menu {
+        display: flex;
+        justify-content: center;
+        padding: map-get($largeur, commander_menu);
+    }
+
+
+    @mixin footer_menu {
+        height: map-get($hauteur, footer);
+        background-color: $gris-sombre;
+        position: relative;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: map-get($largeur, commander_menu);
+        @include tablette-only{
+            top:map-get($top, commander_menu);
+            height: map-get($hauteur, footer_tablette);
+        }
+
+        @include ordinateur-only {
+            left: map-get($left, commander_menu_ordi);
+            width: map-get($largeur, commander_menu_ordi);
+            right: map-get($right, commander_menu_ordi);
+            position: absolute;
+            height: map-get($hauteur, commander_menu_ordi);
+            padding: map-get($largeur, commander_menu_ordi);
+        }
+    }
+
+    @mixin i_menu {
+        color: $white;
+    }
+
+    @mixin partie1 {
+        display: flex;
+    }
+
+    @mixin titre_partie_1 {
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: space-between;
+
+    }
+
+    @mixin titre_footer_menu {
+        top:map-get($top, titre_menu_mobile);
+        height: map-get($hauteur, titre_footer);
+        filter: invert(1);
+        margin: map-get($margeexterne, titre_footer);
+        border-radius: map-get($anglebord, titre_footer);
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        right: map-get($right, titre_footer);
+
+        @include tablette-only {
+
+            top: map-get($top, titre_menu_tablette);
+            right: map-get($right, titre_footer_tablette);
+            margin:map-get($margeexterne, footer_menu_tablette);
+            
+        }
+
+        @include ordinateur-only {
+            top: map-get($top, titre_menu_ordi);
+            left: map-get($left, footer_menu_ordi);
+            margin: map-get($margeexterne, footer_menu_ordi);
+            width: map-get($largeur, footer_menu_ordi);
+            padding: map-get($margeinterne, footer_menu_ordi);
+
+        }
+
+    }
+
+    @mixin ul_menu {
+        display: grid;
+        justify-content: space-between;
+        height: map-get($hauteur, ul_mobile);
+        list-style-type: none;
+        padding: map-get($margeinterne, ul);
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        right: map-get($right, ul);
+        width: map-get($largeur, ul);
+
+        @include tablette-only {
+            left: map-get($left, ul_tablette);
+
+        height: map-get($hauteur, ul_tablette);
+        }
+
+        @include ordinateur-only {
+            top: map-get($top, ul_ordi);
+            right: map-get($right, ul_ordi);
+            padding: map-get($margeinterne, ul_ordi);
+            font-size: map-get($taille, ul_ordi);
+
+        }
+
+    }
+
+    @mixin a_menu {
+        text-decoration: none;
+        color: $white;
+        font-size: map-get($taille, a_menu_mobile);
+        font-family: Arial, Helvetica, sans-serif;
+
+        @include tablette-only {
+            font-size: map-get($taille, a_menu_tablette);
+        }
+
+        @include ordinateur-only {
+            font-size: map-get($taille, a_menu_ordi);
+        }
+    }
+
+    @mixin fourchette_couteau_menu {
+        color: $white;
+        font-size: map-get($taille, a_menu_ordi);
+        margin: map-get($margeexterne, fourchette_couteau);
+
+        @include tablette-only {
+            font-size: map-get($taille, fourchette_couteau_mobile);
+        }
+
+        @include ordinateur-only {
+            font-size: map-get($taille, fourchette_couteau_tablette);
+        }
+    }
+
+    @mixin icone_hande_menu {
+        color: $white;
+        margin: map-get($margeexterne, fourchette_couteau_ordi);
+
+        @include tablette-only {
+
+            font-size: map-get($taille, icone_hande_tablette);
+        }
+
+        @include ordinateur-only {
+
+            font-size: map-get($taille, icone_hande_ordi);
+        }
+    }
+
+    @mixin image_footer {
+        height: map-get($hauteur, image_footer);
+        top: map-get($top, image_footer);
+        position: relative;
+
+        @include tablette-only {
+            top: map-get($top, image_footer_tablette);
+            height: map-get($hauteur, image_footer_tablette);
+        }
+
+        @include ordinateur-only {
+            height: map-get($hauteur, image_footer_ordi);
+            padding: map-get($margeinterne, image_footer_ordi);
+        }
+    }
+
+        .droite_block {
+            display: flex;
+            position: relative;
+            left: map-get($left, droite_block);
+
+            @include tablette-only {
+                left: map-get($left, droite_block_tablette);
+            }
+
+            @include ordinateur-only {
+                left: map-get($left, droite_block_ordi);
+            }
+        }
+
+        .coche {
+            background-color: $vert;
+            position: relative;
+
+            width: map-get($largeur, coche_mobile);
+
+            @include tablette-only {
+
+                width: map-get($largeur, coche_tablette);
+            }
+
+            @include ordinateur-only {
+
+                width: map-get($largeur, coche_ordi);
+            }
+        }
+
+        @mixin block_menu {
+            padding: map-get($margeinterne, block);
+            margin: map-get($margeexterne, block);
+            background-color: $white;
+            padding: map-get($margeinterne, block);
+            box-shadow: map-get($ombre, block_menu $gris);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: map-get($ombre, block_menu-hover) $gris;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius:map-get($anglebord,block_mobile);
+            height: map-get($hauteur, block_mobile);
+            @include tablette-only {
+                border-radius: map-get($anglebord, block_tablette);
+                height: map-get($hauteur, block_tablette);
+            }
+            @include ordinateur-only {
+                width: map-get($largeur, block_ordi);
+                margin: map-get($margeexterne, block_ordi);
+            }
+            &:hover{
+                h3,h4{
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include mobile-only{
+                    width: 85%;}
+                    @include tablette-only{
+                    width: 100%;}
+                    @include ordinateur-only{
+                    width: 80%;}
+            }}
+            &:hover {
+                .droite_block {
+                    -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                }
+            }
+
+            &:hover {
+                    .description {
+                    margin: map-get($margeexterne, description_mobile);
+                    width: 45%;
+                    @include tablette-only {
+                        .description {
+                        margin: map-get($margeexterne, description_tablette);
+                        width: 55%;
+                            }
+                        }
+                    }
+                    @include ordinateur-only {
+                        .description {
+                            margin: map-get($margeexterne, description_ordi);
+                            width: 12%;
+                        }
+                    }
+                }
+
+            &:hover {
+                .fa-sharp {
+                    color: $white;
+                    animation: spin 1s linear 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: map-get($hauteur, fa_sharp_mobile);
+                    width: map-get($largeur, fa_sharp_mobile);
+                    @include tablette-only {
+                        width: map-get($largeur, fa_sharp_tablette);
+                        font-size: map-get($taille, fa_sharp_tablette);
+                    }
+                    @include ordinateur-only {
+                        width: map-get($largeur, fa_sharp_ordi);
+                        font-size: map-get($taille, fa_sharp_ordi);
+                    }
+                }
+            }
+        }
+
+            body {
+                white-space: nowrap;
+                position: absolute;
+            }
+
+            @media screen and (max-width:500px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-50px);
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+            @media (min-width:800px) {
+                @keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-50px);
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+            @media (min-width:500px) and (max-width:800px) {
+                @-webkit-keyframes slide-left {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(-100px);
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
+            #fourchette_couteau {
+                padding: map-get($margeinterne, fourchette);
+            }
+
+            .block_ENTREES {
+                animation: entrees 2s linear;
+
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+
+            }
+
+            .block_PLATS {
+                animation: entrees 4s linear;
+
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                33% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+
+            }
+
+            .block_DESSERTS {
+                animation: entrees 6s linear;
+
+                @include ordinateur-only {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            @keyframes entrees {
+                0% {
+                    opacity: 0;
+                }
+
+                66% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+            @-moz-keyframes spin {
+                100% {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes spin {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spin {
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
