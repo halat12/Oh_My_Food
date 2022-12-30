@@ -230,7 +230,7 @@
         font-size: map-get($taille, nouveau1_tablette);
         background-color: #7FFFD4;
         position: absolute;
-        color: #006300;
+        color: $vertclaire;
         margin: map-get($MargeExterne, nouveau1_tablette);
         font-family: Arial, Helvetica, sans-serif;
         float: right;
@@ -270,7 +270,7 @@
         width:  map-get($largeur, nouveau2_tablette);
         right:  map-get($right, nouveau2_tablette);
         font-size:  map-get($taille, nouveau2_tablette);
-        background-color: #7FFFD4;
+        background-color: $vertclaire;
         position: absolute;
         color: #006300;
         margin:  map-get($MargeExterne, nouveau2_tablette);
