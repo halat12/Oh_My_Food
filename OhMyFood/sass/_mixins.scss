@@ -224,6 +224,7 @@
     position: absolute;
     z-index: 1;
     padding: 0.5rem 0rem 0rem 0rem;
+    
     @include tablette-only{
         width: map-get($largeur, nouveau1_tablette);
         right: map-get($right, nouveau1_tablette);
@@ -249,6 +250,7 @@
         font-family: Arial, Helvetica, sans-serif;
         float: right;
         height: map-get($hauteur, nouveau1_ordi);
+        
     }
 }
 
@@ -314,8 +316,11 @@
     font-family: Arial, Helvetica, sans-serif;
     @include tablette-only{
 
-    padding: map-get($margeinterne, restaurant_tablette);
+    padding: map-get($margeinterne, restaurant_mobile);
     }
+    @include tablette-only{
+        
+    padding: map-get($margeinterne, restaurant_tablette);
     @include ordinateur-only {
         background-color: $gris;
         column-count: 2;
